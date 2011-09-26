@@ -6,9 +6,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>List Ticker Demo</title>
-	<link type="text/css" href="style.css" rel="stylesheet"/>
+	<link type="text/css" href="css/style.css" rel="stylesheet"/>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<script type="text/javascript" src="ticker.js"></script>
+	<script type="text/javascript" src="js/ticker.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
 		$('#fade').list_ticker({
@@ -24,37 +24,51 @@
 			effect:'fade',
 			run_once:true
 		});	
+		$('#random').list_ticker({
+			speed:2000,
+			effect:'fade',
+			random:true
+		});
 	})
 	</script>
 	<meta name="generator" content="TextMate http://macromates.com/">
 	<meta name="author" content="Alex Fish">
 </head>
 <body>
-<h1>List Ticker</h1>
-<h2>run_once:true</h2>
-<ul id="once">
-	<li>First Item</li>
-	<li>Second Item</li>
-	<li>Third Item</li>
-	<li>Fourth Item</li>
-	<li>Fifth Item</li>
-</ul>
-<h2>effect:'fade'</h2>
-<ul id="fade">
-	<li>First Item</li>
-	<li>Second Item</li>
-	<li>Third Item</li>
-	<li>Fourth Item</li>
-	<li>Fifth Item</li>
-</ul>
-<h2>effect:'slide'</h2>
-<ul id="slide">
-	<li>First Item</li>
-	<li>Second Item</li>
-	<li>Third Item</li>
-	<li>Fourth Item</li>
-	<li>Fifth Item</li>
-</ul>
-
+<div id="container">
+	<h1>List Ticker</h1>
+	<h2>run_once:true</h2>
+	<ul id="once">
+		<li>First Item</li>
+		<li>Second Item</li>
+		<li>Third Item</li>
+		<li>Fourth Item</li>
+		<li>Fifth Item</li>
+	</ul>
+	<h2>effect:'fade'</h2>
+	<ul id="fade">
+		<li>First Item</li>
+		<li>Second Item</li>
+		<li>Third Item</li>
+		<li>Fourth Item</li>
+		<li>Fifth Item</li>
+	</ul>
+	<h2>effect:'slide'</h2>
+	<ul id="slide">
+		<li>First Item</li>
+		<li>Second Item</li>
+		<li>Third Item</li>
+		<li>Fourth Item</li>
+		<li>Fifth Item</li>
+	</ul>
+	<h2>random:true</h2>
+	<ul id="random">
+		<li>First Item</li>
+		<li>Second Item</li>
+		<li>Third Item</li>
+		<li>Fourth Item</li>
+		<li>Fifth Item</li>
+	</ul>
+</div>
 </body>
 </html>

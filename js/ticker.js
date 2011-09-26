@@ -28,7 +28,8 @@
     var defaults = {
       speed:4000,
 	  effect:'slide',
-	  run_once:false
+	  run_once:false,
+	  random:false
     };
     
     var options = $.extend(defaults, options);
@@ -47,8 +48,12 @@
         list.not(':first').hide();
         
         var first_li = list.eq(0)
-        var second_li = list.eq(1)
+		var second_li = options.random ? list.eq(Math.floor(Math.random()*list.length)) : list.eq(1)
 		
+		if(first_li.get(0) === second_li.get(0) && options.random){
+			second_li = list.eq(Math.floor(Math.random()*list.length));
+		}
+	
 		if(options.effect == 'slide'){
 			first_li.slideUp();
 			second_li.slideDown(function(){

@@ -30,6 +30,9 @@
 ###run_once
 * boolean
 
+###random
+* boolean
+
 ###speed
 * integer (milliseconds)
 
